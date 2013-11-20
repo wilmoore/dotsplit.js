@@ -1,0 +1,19 @@
+{
+  "name": "dotsplit",
+  "version": "0.0.1",
+  "description": "Transform dot (`.`) delimited strings to array of strings for Node.js and the browser.",
+  "repo": "wilmoore/dotsplit.js",
+  "keywords": [
+    "string",
+    "array",
+    "delimited",
+    "namespace",
+    "split",
+    "dot"
+  ],
+  "dependencies": {},
+  "development": {},
+  "scripts": [
+    "index.js"
+  ]
+}
