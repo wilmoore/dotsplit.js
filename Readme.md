@@ -30,7 +30,7 @@
 
 [npm](https://npmjs.org/package/dotsplit.js)
 
-[![NPM](https://nodei.co/npm/dotsplit.png?downloads=true)](https://nodei.co/npm/dotsplit/)
+[![NPM](https://nodei.co/npm/dotsplit.js.png?downloads=true)](https://nodei.co/npm/dotsplit.js/)
 
 [jam](http://jamjs.org/packages/#/details/dotsplit.js)
 
