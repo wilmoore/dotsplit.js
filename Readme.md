@@ -8,10 +8,14 @@
 
 ## Examples
 
+#### Split on dot
+
     dotsplit('group.0.section.a.seat.3')
     //=> ['group', '0', 'section', 'a', 'seat', '3']
 
-    dotsplit('01.document\.png')
+#### Split on dot preserving escaped dots
+
+    dotsplit('01.document\\.png')
     //=> ['01', 'document.png']
 
 ## Installation
@@ -43,6 +47,7 @@
 ## Inspiration
 
 - [selectn][]
+- [grunt#util.namespace.getParts()][getParts]
 
 ## License
 
@@ -51,3 +56,5 @@
 [selectn]:  https://github.com/wilmoore/selectn
 [global]:   https://raw.github.com/wilmoore/dotsplit.js/master/dotsplit.min.js
 [Node.js]:  http://nodejs.org
+[getParts]: https://github.com/gruntjs/grunt/blob/master/lib/util/namespace.js#L17
+
