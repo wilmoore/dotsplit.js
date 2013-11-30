@@ -1,8 +1,4 @@
-# dotsplit.js
-
-[![Build Status](https://travis-ci.org/wilmoore/dotsplit.js.png?branch=master)](https://travis-ci.org/wilmoore/dotsplit.js)
-[![Build Status](https://david-dm.org/wilmoore/dotsplit.js.png)](https://david-dm.org/wilmoore/dotsplit.js)
-[![NPM version](https://badge.fury.io/js/dotsplit.js.png)](http://badge.fury.io/js/dotsplit.js)
+# dotsplit.js [![Build Status](https://travis-ci.org/wilmoore/dotsplit.js.png?branch=master)](https://travis-ci.org/wilmoore/dotsplit.js) [![Build Status](https://david-dm.org/wilmoore/dotsplit.js.png)](https://david-dm.org/wilmoore/dotsplit.js) [![NPM version](https://badge.fury.io/js/dotsplit.js.png)](http://badge.fury.io/js/dotsplit.js)
 
   Transform dot (`.`) delimited strings to array of strings for [Node.js][] and the browser.
 
@@ -13,7 +9,7 @@
     dotsplit('group.0.section.a.seat.3')
     //=> ['group', '0', 'section', 'a', 'seat', '3']
 
-#### Split on dot preserving escaped dots
+#### Split on dot preserving escaped characters
 
     dotsplit('01.document\\.png')
     //=> ['01', 'document.png']
@@ -40,9 +36,15 @@
 
     $ volo add wilmoore/dotsplit.js
 
-[global][]
+[manual][]
 
-    <script src="https://raw.github.com/wilmoore/dotsplit.js/master/dotsplit.js"></script>
+1. download
+
+        % curl -#O https://raw.github.com/wilmoore/dotsplit.js/master/dotsplit.js
+
+2. use
+
+        <script src="dotsplit.js"></script>
 
 ## Inspiration
 
@@ -54,7 +56,7 @@
   MIT
 
 [selectn]:  https://github.com/wilmoore/selectn
-[global]:   https://raw.github.com/wilmoore/dotsplit.js/master/dotsplit.min.js
 [Node.js]:  http://nodejs.org
 [getParts]: https://github.com/gruntjs/grunt/blob/master/lib/util/namespace.js#L17
+[manual]:   http://yuiblog.com/blog/2006/06/01/global-domination/
 
