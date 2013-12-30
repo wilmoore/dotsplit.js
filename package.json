@@ -19,21 +19,10 @@
     "type": "git",
     "url": "https://github.com/wilmoore/dotsplit.js"
   },
-  "component": {
-    "scripts": {
-      "selectn": "index.js"
-    }
-  },
   "devDependencies": {
     "mocha": "*",
-    "browserify": "~2.27.1",
-    "chai": "~1.8.1"
-  },
-  "jam": {
-    "include": [
-      "dotsplit.js",
-      "Readme.md"
-    ]
+    "browserify": "*",
+    "chai": "*"
   },
   "volo": {
     "url": "https://raw.github.com/wilmoore/dotsplit.js/v{version}/dotsplit.js"
