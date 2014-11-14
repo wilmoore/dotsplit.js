@@ -1,6 +1,8 @@
-# dotsplit.js [![Build Status](https://travis-ci.org/wilmoore/dotsplit.js.png?branch=master)](https://travis-ci.org/wilmoore/dotsplit.js) [![Build Status](https://david-dm.org/wilmoore/dotsplit.js.png)](https://david-dm.org/wilmoore/dotsplit.js) [![NPM version](https://badge.fury.io/js/dotsplit.js.png)](http://badge.fury.io/js/dotsplit.js)
+# dotsplit.js
 
-  Transform dot (`.`) delimited strings to array of strings for [Node.js][] and the browser.
+[![Build Status](http://img.shields.io/travis/wilmoore/dotsplit.js.svg)](https://travis-ci.org/wilmoore/dotsplit.js) [![NPM version](http://img.shields.io/npm/v/dotsplit.js.svg)](https://www.npmjs.org/package/dotsplit.js) [![NPM downloads](http://img.shields.io/npm/dm/dotsplit.js.svg)](https://www.npmjs.org/package/dotsplit.js) [![LICENSE](http://img.shields.io/npm/l/dotsplit.js.svg)](license)
+
+> Transform dot (`.`) delimited strings to array of strings for [Node.js][] and the browser.
 
 ## Examples
 
@@ -53,7 +55,7 @@
 
 ## License
 
-  MIT
+  [MIT](license)
 
 [selectn]:  https://github.com/wilmoore/selectn
 [Node.js]:  http://nodejs.org
