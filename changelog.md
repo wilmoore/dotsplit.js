@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file (keepachangelog.com).
 
+## 1.0.1 - 2016-01-24
+### Fixed
+- Fixed bug where empty strings or falsey values result in an error being thrown.
+
 ## 1.0.0 - 2016-01-24
 ### Removed
 - Dropped support for `component` and `volo` package managers.
