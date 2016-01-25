@@ -1,64 +1,52 @@
 # dotsplit.js
+> Transform dot-delimited strings to array of strings for [Node.js][] and the browser.
 
-[![Build Status](http://img.shields.io/travis/wilmoore/dotsplit.js.svg)](https://travis-ci.org/wilmoore/dotsplit.js) [![NPM version](http://img.shields.io/npm/v/dotsplit.js.svg)](https://www.npmjs.org/package/dotsplit.js) [![NPM downloads](http://img.shields.io/npm/dm/dotsplit.js.svg)](https://www.npmjs.org/package/dotsplit.js) [![LICENSE](http://img.shields.io/npm/l/dotsplit.js.svg)](license)
+[![Build Status](http://img.shields.io/travis/wilmoore/dotsplit.js.svg)](https://travis-ci.org/wilmoore/dotsplit.js) [![Code Climate](https://codeclimate.com/github/wilmoore/dotsplit.js/badges/gpa.svg)](https://codeclimate.com/github/wilmoore/dotsplit.js) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 
-> Transform dot (`.`) delimited strings to array of strings for [Node.js][] and the browser.
+```shell
+npm install dotsplit.js --save
+```
 
-## Examples
+> You can also use Duo, Bower or [download the files manually](https://github.com/wilmoore/dotsplit.js/releases).
+
+###### npm stats
+
+[![npm](https://img.shields.io/npm/v/dotsplit.js.svg)](https://www.npmjs.org/package/dotsplit.js) [![NPM downloads](http://img.shields.io/npm/dm/dotsplit.js.svg)](https://www.npmjs.org/package/dotsplit.js) [![David](https://img.shields.io/david/wilmoore/dotsplit.js.svg)](https://david-dm.org/wilmoore/dotsplit.js)
+
+## API Example
 
 #### Split on dot
 
-    dotsplit('group.0.section.a.seat.3')
-    //=> ['group', '0', 'section', 'a', 'seat', '3']
+```js
+dotsplit('group.0.section.a.seat.3')
+//=> ['group', '0', 'section', 'a', 'seat', '3']
+```
 
 #### Split on dot preserving escaped characters
 
-    dotsplit('01.document\\.png')
-    //=> ['01', 'document.png']
+```js
+dotsplit('01.document\\.png')
+//=> ['01', 'document.png']
+```
 
-## Installation
+## API
 
-[component](http://component.io/wilmoore/dotsplit.js)
+### `dotsplit(String)`
 
-    $ component install wilmoore/dotsplit.js
+###### arguments
 
-[bower](http://sindresorhus.com/bower-components/)
+ - `string (String)` Dot-delimited string.
 
-    $ bower install dotsplit.js
+###### returns
 
-[npm](https://npmjs.org/package/dotsplit.js)
+ - `(Array)` Array of strings.
 
-[![NPM](https://nodei.co/npm/dotsplit.js.png?downloads=true)](https://nodei.co/npm/dotsplit.js/)
+## Contributing
 
-[jam](http://jamjs.org/packages/#/details/dotsplit.js)
+> SEE: [contributing.md](contributing.md)
 
-    $ jam install dotsplit.js
+## Licenses
 
-[volo](http://volojs.org)
+[![GitHub license](https://img.shields.io/github/license/wilmoore/dotsplit.js.svg)](https://github.com/wilmoore/dotsplit.js/blob/master/license)
 
-    $ volo add wilmoore/dotsplit.js
-
-[manual][]
-
-1. download
-
-        % curl -#O https://raw.github.com/wilmoore/dotsplit.js/master/dotsplit.js
-
-2. use
-
-        <script src="dotsplit.js"></script>
-
-## Inspiration
-
-- [selectn][]
-- [grunt#util.namespace.getParts()][getParts]
-
-## License
-
-  [MIT](license)
-
-[selectn]:  https://github.com/wilmoore/selectn
-[Node.js]:  http://nodejs.org
-[getParts]: https://github.com/gruntjs/grunt/blob/master/lib/util/namespace.js#L17
-[manual]:   http://yuiblog.com/blog/2006/06/01/global-domination/
-
+[Node.js]: https://nodejs.org/en/about
