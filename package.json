@@ -1,7 +1,7 @@
 {
   "name": "dotsplit.js",
   "description": "Transform dot-delimited strings to array of strings for Node.js and the browser.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Wil Moore III <wil.moore@wilmoore.com>",
   "bugs": {
     "url": "https://github.com/wilmoore/dotsplit.js/issues"
