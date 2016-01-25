@@ -1,46 +1,41 @@
+'use strict'
 
-// expose `dotsplit`
-
-module.exports = dotsplit;
-
-/**
- * Transform dot (`.`) delimited strings to array of strings.
- *
- * ### Split on dot
- *
- *    dotsplit('group.0.section.a.seat.3')
- *    //=> ['group', '0', 'section', 'a', 'seat', '3']
- *
- * ### Split on dot preserving escaped dots
- *
- *    dotsplit('01.document\.png')
- *    //=> ['01', 'document.png']
- *
- * @param  {String} string
- * dot (`.`) delimited string
- *
- * @return {Array}
- * array of strings
+/*!
+ * imports.
  */
 
-function dotsplit(string) {
-  return string
-    .replace(/\\\./g, '\uffff') // escaped dots to placeholder
-    .split('.')                 // split on non-escaped dots
-    .map(todots);               // placeholder (escapd dots) to literal dots
+var map = require('arraymap')
+
+/*!
+ * exports.
+ */
+
+module.exports = dotsplit
+
+/**
+ * Transform dot-delimited strings to array of strings.
+ *
+ * @param  {String} string
+ * Dot (`.`) delimited string.
+ *
+ * @return {Array}
+ * Array of strings.
+ */
+
+function dotsplit (string) {
+  return map(todots, string.replace(/\\\./g, '\uffff').split('.'))
 }
 
 /**
  * Change placeholder to dots.
  *
  * @param  {String} string
- * dot (`.`) delimited string with placeholders.
+ * Dot-delimited string with placeholders.
  *
  * @return {String}
- * dot (`.`) delimited string without placeholders.
+ * Dot-delimited string without placeholders.
  */
 
-function todots(string) {
-  return string.replace(/\uffff/g, '.');
+function todots (string) {
+  return string.replace(/\uffff/g, '.')
 }
-
