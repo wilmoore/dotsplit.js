@@ -6,6 +6,7 @@
 
 var dotted = require('arraymap')(todots)
 var compact = require('array.filter')(String)
+var toString = Object.prototype.toString
 
 /*!
  * exports.
@@ -43,7 +44,11 @@ function dotsplit (string) {
  */
 
 function normalize (string) {
-  return compact((string || '').replace(/\\\./g, '\uffff').split('.'))
+  return compact(
+    (toString.call(string) === '[object String]' ? string : '')
+    .replace(/\\\./g, '\uffff')
+    .split('.')
+  )
 }
 
 /**

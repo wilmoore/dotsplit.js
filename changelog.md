@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file (keepachangelog.com).
 
+## 1.0.3 - 2016-01-24
+### Fixed
+- Fixed bug where passing non-string values was throwing a TypeError.
+
 ## 1.0.2 - 2016-01-24
 ### Changed
 - Updated dev dependencies.
