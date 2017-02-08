@@ -1,18 +1,6 @@
 'use strict'
 
-/*!
- * imports.
- */
-
-var dotted = require('arraymap')(todots)
-var compact = require('array.filter')(String)
 var toString = Object.prototype.toString
-
-/*!
- * exports.
- */
-
-module.exports = dotsplit
 
 /**
  * Transform dot-delimited strings to array of strings.
@@ -25,30 +13,52 @@ module.exports = dotsplit
  */
 
 function dotsplit (string) {
-  return dotted(normalize(string))
+  var idx = -1
+  var str = compact(normalize(string).split('.'))
+  var end = str.length
+  var out = []
+
+  while (++idx < end) {
+    out.push(todots(str[idx]))
+  }
+
+  return out
 }
 
 /**
- * Normalize string by:
- *
- * (1) Dropping falsey values (empty, null, etc.)
- * (2) Replacing escapes with a placeholder.
- * (3) Splitting string on `.` delimiter.
- * (4) Dropping empty values from resulting array.
+ * Replace escapes with a placeholder.
  *
  * @param  {String} string
  * Dot-delimited string.
  *
- * @return {Array}
- * Array of strings.
+ * @return {String}
+ * Dot-delimited string with placeholders in place of escapes.
  */
 
 function normalize (string) {
-  return compact(
-    (toString.call(string) === '[object String]' ? string : '')
-    .replace(/\\\./g, '\uffff')
-    .split('.')
-  )
+  return (toString.call(string) === '[object String]' ? string : '').replace(/\\\./g, '\uffff')
+}
+
+/**
+ * Drop empty values from array.
+ *
+ * @param  {Array} array
+ * Array of strings.
+ *
+ * @return {Array}
+ * Array of strings (empty values dropped).
+ */
+
+function compact (arr) {
+  var idx = -1
+  var end = arr.length
+  var out = []
+
+  while (++idx < end) {
+    if (arr[idx]) out.push(arr[idx])
+  }
+
+  return out
 }
 
 /**
@@ -64,3 +74,9 @@ function normalize (string) {
 function todots (string) {
   return string.replace(/\uffff/g, '.')
 }
+
+/*!
+ * exports.
+ */
+
+module.exports = dotsplit
